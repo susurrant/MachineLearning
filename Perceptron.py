@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+'''感知机'''
 
 import numpy as  np
 
