@@ -90,8 +90,8 @@ if __name__ == '__main__':
     for i in range(1000):
         batch = mnist.train.next_batch(50)
         if i%100 == 0:
-        train_accuracy = accuracy.eval(feed_dict={x:batch[0], y_: batch[1], keep_prob: 1.0})
-        print("-->step %d, training accuracy %.4f"%(i, train_accuracy))
+            train_accuracy = accuracy.eval(feed_dict={x:batch[0], y_: batch[1], keep_prob: 1.0})
+            print("-->step %d, training accuracy %.4f"%(i, train_accuracy))
         train_step.run(feed_dict={x: batch[0], y_: batch[1], keep_prob: 0.5})
 
     # 全部训练完成之后，在最终测试集上进行全面测试，得到整体的分类准确率
