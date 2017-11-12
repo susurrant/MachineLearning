@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-'''卷积神经网络测试MNIST数据'''
+'''卷积神经网络测试MNIST数据（转）'''
 
 from tensorflow.examples.tutorials.mnist import input_data
 import tensorflow as tf
