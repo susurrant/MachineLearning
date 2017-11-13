@@ -42,7 +42,8 @@ if __name__ == '__main__':
         lossArr = 0
         for j in range(30000):
             sess.run(train, feed_dict={x: ix.reshape((9,3)), y: iy.reshape((9,1))})
-            predArr, lossArr = sess.run([y_, loss], feed_dict={x: ix.reshape((9,3)), y: iy.reshape((9,1))})
-            #print(lossArr)
+            if j % 5000 == 0:
+                predArr, lossArr = sess.run([y_, loss], feed_dict={x: ix.reshape((9,3)), y: iy.reshape((9,1))})
+                print(lossArr)
 
         print(predArr*100)
