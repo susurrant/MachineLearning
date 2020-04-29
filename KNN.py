@@ -20,6 +20,7 @@ def readData():
                      [-1,-1,'c'], [-2,0,'c'], [0,-2,'c']])
     return data
 
+
 if __name__ == '__main__':
     data = readData()
     pp = np.array([0,0])

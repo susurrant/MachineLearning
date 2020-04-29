@@ -49,10 +49,10 @@ def KMeans(data, k):
 
 
 def readData():
-    data = np.array([[0,0], [0,1], [1,0], [1,1], [-1,0],
+    return np.array([[0,0], [0,1], [1,0], [1,1], [-1,0],
                      [99,99], [100,100], [99,100], [100,99],
                      [0,99], [1,99], [1,100], [0,100]])
-    return data
+
 
 if __name__ == '__main__':
     data = readData()

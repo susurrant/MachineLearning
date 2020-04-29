@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 '''感知机'''
 
-import numpy as  np
+import numpy as np
 
 def train(X, y, step):
     dnum, featureSize = X.shape
@@ -20,7 +20,7 @@ def train(X, y, step):
     
     return W, b
 
-def test(X, y, W, b):
+def predict(X, y, W, b):
     for i, x in enumerate(X):
         print(y[i]*(np.dot(x, W)+b))
 
@@ -29,9 +29,10 @@ def readData():
     y = [1,1,-1]
     return X, y
 
+
 if __name__ == '__main__':
     step = 1
     X, y = readData()
     W, b = train(X, y, step)
     print(W, b)
-    test(X, y, W, b)
+    predict(X, y, W, b)
